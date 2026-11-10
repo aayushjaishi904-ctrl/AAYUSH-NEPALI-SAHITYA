@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>आयुस नेपाली साहित्य | AAYUSH NEPALI SAHITYA</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --primary:#172554;
+    --secondary:#e43f5a;
+    --background:#f4f6fb;
+    --card:#ffffff;
+    --text:#222222;
+}
+
+body{
+    font-family:"Noto Sans Devanagari",sans-serif;
+    background:var(--background);
+    color:var(--text);
+    transition:0.3s;
+}
+
+body.dark{
+    --background:#101827;
+    --card:#1e293b;
+    --text:#ffffff;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#172554,#1e40af);
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+header h1{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+header p{
+    line-height:1.8;
+}
+
+/* NAVIGATION */
+
+nav{
+    background:var(--secondary);
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:15px 16px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    background:#172554;
+}
+
+/* SETTINGS */
+
+.settings{
+    text-align:right;
+    padding:15px 20px;
+}
+
+.settings button{
+    background:#172554;
+    color:white;
+    border:blue;
+    padding:10px 15px;
+    border-radius:7px;
+    cursor:pointer;
+    margin-left:5px;
+}
+
+/* WELCOME */
+
+.hero{
+    background:linear-gradient(
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.65)
+    ),
+    url("https://images.unsplash.com/photo-1455390582262-044cdead277a")
+    center/cover;
+
+    color:white;
+    text-align:center;
+    padding:85px 20px;
+}
+
+.hero h2{
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:17px;
+    line-height:2;
+}
+
+.hero button{
+    margin-top:25px;
+    padding:13px 25px;
+    background:#e43f5a;
+    color:white;
+    border:none;
+    border-radius:7px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* INTRODUCTION */
+
+.intro{
+    text-align:center;
+    padding:55px 20px;
+}
+
+.intro h2{
+    color:#e43f5a;
+    margin-bottom:20px;
+}
+
+.intro p{
+    max-width:850px;
+    margin:auto;
+    line-height:2.2;
+}
+
+/* CATEGORY */
+
+.categories{
+    padding:35px 20px 60px;
+    text-align:center;
+}
+
+.categories h2{
+    font-size:28px;
+    margin-bottom:30px;
+}
+
+.category-container{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:22px;
+}
+
+.card{
+    background:var(--card);
+    color:var(--text);
+    padding:30px 20px;
+    border-radius:14px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+}
+
+.icon{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#e43f5a;
+    margin-bottom:15px;
+}
+
+.card p{
+    line-height:1.9;
+    font-size:14px;
+}
+
+.card a{
+    display:inline-block;
+    margin-top:20px;
+    background:#172554;
+    color:white;
+    padding:11px 20px;
+    text-decoration:none;
+    border-radius:7px;
+}
+
+/* PURPOSE */
+
+.purpose{
+    background:var(--card);
+    color:var(--text);
+    padding:50px 20px;
+    text-align:center;
+}
+
+.purpose h2{
+    color:#e43f5a;
+    margin-bottom:20px;
+}
+
+.purpose p{
+    max-width:800px;
+    margin:auto;
+    line-height:2.2;
+}
+
+/* AUTHOR */
+
+.author{
+    text-align:center;
+    padding:45px 20px;
+}
+
+.author h2{
+    color:#e43f5a;
+    margin-bottom:15px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#172554;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    line-height:2;
+}
+
+footer span{
+    color:#ff7185;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:23px;
+    }
+
+    .hero h2{
+        font-size:27px;
+    }
+
+    nav a{
+        padding:12px 9px;
+        font-size:13px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<h1>📚 आयुस नेपाली साहित्य</h1>
+
+<p>AAYUSH NEPALI SAHITYA</p>
+
+<p>नेपाली भाषा, साहित्य र सिर्जनाको साझा संसार</p>
+
+</header>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<a href="index.html">🏠 गृहपृष्ठ</a>
+
+<a href="katha.html">📖 कथा</a>
+
+<a href="kabita.html">📝 कविता</a>
+
+<a href="bal-sahitya.html">🧒 बाल साहित्य</a>
+
+<a href="nibandha.html">📚 निबन्ध</a>
+
+<a href="about.html">👤 हाम्रो बारेमा</a>
+
+</nav>
+
+<!-- SETTINGS -->
+
+<div class="settings">
+
+<button onclick="toggleDark()">
+🌙 Light / Dark
+</button>
+
+<button onclick="alert('यस वेबसाइटको मुख्य भाषा नेपाली हो।')">
+🌐 नेपाली
+</button>
+
+</div>
+
+<!-- WELCOME -->
+
+<section class="hero">
+
+<h2>Welcome to आयुस नेपाली साहित्य</h2>
+
+<p>
+नेपाली भाषा, साहित्य र सिर्जनाको संसारमा<br>
+तपाईंलाई हार्दिक स्वागत छ।
+</p>
+
+<button onclick="document.getElementById('categories').scrollIntoView({behavior:'smooth'})">
+
+साहित्य पढ्न सुरु गर्नुहोस्
+
+</button>
+
+</section>
+
+<!-- INTRODUCTION -->
+
+<section class="intro">
+
+<h2>हाम्रो साहित्यिक संसारमा स्वागत छ।</h2>
+
+<p>
+
+आयुस नेपाली साहित्य नेपाली भाषा, साहित्य,
+कला र सिर्जनालाई माया गर्ने सम्पूर्ण पाठकहरूको
+साझा डिजिटल प्लेटफर्म हो।
+
+यहाँ कथा, कविता, बाल साहित्य र निबन्धका
+विभिन्न सामग्रीहरू पढ्न सकिन्छ।
+
+हाम्रो प्रयास नेपाली साहित्यलाई नयाँ पुस्तासम्म
+पुर्‍याउनु र नेपाली भाषाको संरक्षण तथा विकासमा
+योगदान पुर्‍याउनु हो।
+
+</p>
+
+</section>
+
+<!-- FOUR MAIN CATEGORIES -->
+
+<section class="categories" id="categories">
+
+<h2>📚 साहित्यका मुख्य चार विधा</h2>
+
+<div class="category-container">
+
+<div class="card">
+
+<div class="icon">📖</div>
+
+<h3>नेपाली कथा</h3>
+
+<p>
+जीवन, समाज, प्रेम, संघर्ष,
+प्रेरणा र यथार्थमा आधारित
+विभिन्न नेपाली कथाहरू।
+</p>
+
+<a href="katha.html">कथा पढ्नुहोस् →</a>
+
+</div>
+
+<div class="card">
+
+<div class="icon">📝</div>
+
+<h3>नेपाली कविता</h3>
+
+<p>
+देशप्रेम, प्रकृति, जीवन,
+भावना र समाजसँग सम्बन्धित
+सुन्दर नेपाली कविताहरू।
+</p>
+
+<a href="kabita.html">कविता पढ्नुहोस् →</a>
+
+</div>
+
+<div class="card">
+
+<div class="icon">🧒</div>
+
+<h3>बाल साहित्य</h3>
+
+<p>
+बालबालिकाका लागि रमाइला कथा,
+बाल कविता, ज्ञान र
+नैतिक शिक्षाका सामग्रीहरू।
+</p>
+
+<a href="bal-sahitya.html">बाल साहित्य पढ्नुहोस् →</a>
+
+</div>
+
+<div class="card">
+
+<div class="icon">📚</div>
+
+<h3>नेपाली निबन्ध</h3>
+
+<p>
+शिक्षा, संस्कृति, वातावरण,
+समाज र विभिन्न विषयका
+ज्ञानवर्धक निबन्धहरू।
+</p>
+
+<a href="nibandha.html">निबन्ध पढ्नुहोस् →</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PURPOSE -->
+
+<section class="purpose">
+
+<h2>🎯 हाम्रो वेबसाइटको उद्देश्य</h2>
+
+<p>
+
+आयुस नेपाली साहित्य वेबसाइट निर्माण गर्नुको
+मुख्य उद्देश्य नेपाली भाषा र साहित्यको संरक्षण,
+सम्बर्द्धन तथा प्रवर्द्धन गर्नु हो।
+
+हामी नयाँ पुस्तामा पढ्ने, लेख्ने र सिर्जना गर्ने
+बानीको विकास गर्न चाहन्छौँ।
+
+नेपाली कथा, कविता, बाल साहित्य र निबन्धलाई
+एउटै डिजिटल प्लेटफर्ममा उपलब्ध गराई
+पाठक र लेखकबीच साहित्यिक सम्बन्ध स्थापित गर्नु
+हाम्रो लक्ष्य हो।
+
+नेपाली साहित्यको उज्ज्वल भविष्य निर्माणमा
+सानो योगदान दिनु नै हाम्रो उद्देश्य हो।
+
+</p>
+
+</section>
+
+<!-- AUTHOR -->
+
+<section class="author">
+
+<h2>✍️ Founder & Developer</h2>
+
+<h3>Aayush Jaishi</h3>
+
+<p>Founder of AAYUSH NEPALI SAHITYA</p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 AAYUSH NEPALI SAHITYA</p>
+
+<p>Developed by <span>Aayush Jaishi</span></p>
+
+<p>नेपाली साहित्यको संरक्षण र प्रवर्द्धनमा हाम्रो योगदान।</p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function toggleDark(){
+
+document.body.classList.toggle("dark");
+
+}
+
+</script>
+
+</body>
+</html>
