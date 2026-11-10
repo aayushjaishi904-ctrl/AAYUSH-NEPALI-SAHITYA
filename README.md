@@ -14,11 +14,10 @@
 ## 📖 Main Categories
 
 - 📚 कथा (Stories)
-- 📕 उपन्यास (Novels)
 - 🌹 कविता (Poems)
 - 📝 निबन्ध (Essays)
 - 🧸 बाल साहित्य (Children's Literature)
-- ✍️ नेपाली साहित्य (Nepali Literature)
+
 
 ## ✨ Website Features
 
