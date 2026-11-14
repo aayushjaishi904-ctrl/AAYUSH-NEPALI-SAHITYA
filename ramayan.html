@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html  lang="ne">
+<head><meta name="theme-color" content="#0d47a1"><link rel="manifest" href="manifest.json"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>सम्पूर्ण रामायण | Aayush Nepali Sahitya</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --bg:#fffaf0;
+    --card:#ffffff;
+    --text:#30251c;
+    --primary:#a64b16;
+    --border:#ead8c3;
+}
+
+body.dark{
+    --bg:#171717;
+    --card:#252525;
+    --text:#f5eee5;
+    --primary:#ffad55;
+    --border:#444;
+}
+
+body.blue{
+    --bg:#eaf3ff;
+    --card:#ffffff;
+    --text:#17345c;
+    --primary:#1765ad;
+    --border:#c5d9ef;
+}
+
+body.green{
+    --bg:#eff9ed;
+    --card:#ffffff;
+    --text:#23452a;
+    --primary:#267c39;
+    --border:#c8e4c5;
+}
+
+body{
+    font-family:"Noto Sans Devanagari",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:2;
+    transition:.3s;
+}
+
+header{
+    background:linear-gradient(135deg,#6d260c,#d47a25);
+    color:white;
+    padding:35px 15px;
+    text-align:center;
+}
+
+header h1{
+    font-size:35px;
+}
+
+header p{
+    font-size:15px;
+}
+
+.controls{
+    background:var(--card);
+    padding:15px;
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+    border-bottom:1px solid var(--border);
+}
+
+button,select{
+    padding:9px 15px;
+    border:1px solid var(--border);
+    border-radius:7px;
+    cursor:pointer;
+    background:var(--card);
+    color:var(--text);
+}
+
+button:hover{
+    background:var(--primary);
+    color:white;
+}
+
+.search{
+    width:90%;
+    max-width:600px;
+    padding:13px;
+    border:1px solid var(--border);
+    border-radius:8px;
+    background:var(--card);
+    color:var(--text);
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+.intro{
+    background:var(--card);
+    padding:25px;
+    border-radius:12px;
+    margin-bottom:25px;
+    border:1px solid var(--border);
+}
+
+.intro h2{
+    color:var(--primary);
+}
+
+.kanda{
+    background:var(--card);
+    padding:25px;
+    margin-bottom:25px;
+    border-radius:12px;
+    border:1px solid var(--border);
+    box-shadow:0 3px 12px #00000008;
+}
+
+.kanda h2{
+    color:var(--primary);
+    border-bottom:2px solid var(--border);
+    padding-bottom:10px;
+    margin-bottom:15px;
+}
+
+.kanda h3{
+    margin-top:20px;
+    color:var(--primary);
+}
+
+.kanda p{
+    text-align:justify;
+    margin:12px 0;
+}
+
+.toc{
+    background:var(--card);
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:25px;
+    border:1px solid var(--border);
+}
+
+.toc a{
+    display:block;
+    padding:7px;
+    text-decoration:none;
+    color:var(--primary);
+}
+
+.toc a:hover{
+    text-decoration:underline;
+}
+
+footer{
+    text-align:center;
+    background:#49230f;
+    color:white;
+    padding:25px;
+    margin-top:30px;
+}
+
+.hidden{
+    display:none;
+}
+
+</style>
+<style>
+/* AAYUSH SHARED THEME + LANGUAGE SYSTEM — 15 THEMES / 20 LANGUAGES */
+:root{
+ --ay-bg:#f7f9fc;--ay-card:#fff;--ay-text:#17233a;--ay-primary:#2563eb;
+ --ay-border:#cbd5e1;--ay-soft:#eff6ff;--ay-shadow:0 8px 26px rgba(15,23,42,.08);
+}
+body{background:var(--ay-bg)!important;color:var(--ay-text)!important;transition:background .25s,color .25s}
+body[data-ay-theme="light"]{--ay-bg:#f8fafc;--ay-card:#fff;--ay-text:#1e293b;--ay-primary:#2563eb;--ay-border:#cbd5e1;--ay-soft:#eff6ff}
+body[data-ay-theme="dark"]{--ay-bg:#0f172a;--ay-card:#1e293b;--ay-text:#f8fafc;--ay-primary:#93c5fd;--ay-border:#475569;--ay-soft:#26364f}
+body[data-ay-theme="blue"]{--ay-bg:#e8f3ff;--ay-card:#fff;--ay-text:#12345a;--ay-primary:#075db5;--ay-border:#9fc8f1;--ay-soft:#d8ebff}
+body[data-ay-theme="skyblue"]{--ay-bg:#e9f8ff;--ay-card:#fff;--ay-text:#16445b;--ay-primary:#0284c7;--ay-border:#a9def5;--ay-soft:#dff4ff}
+body[data-ay-theme="pink"]{--ay-bg:#fff0f6;--ay-card:#fff;--ay-text:#64213f;--ay-primary:#db2777;--ay-border:#f3b6d2;--ay-soft:#ffe0ed}
+body[data-ay-theme="skypink"]{--ay-bg:#fff4fb;--ay-card:#fefaff;--ay-text:#5b3151;--ay-primary:#e879b5;--ay-border:#f5c9e4;--ay-soft:#ffeaf7}
+body[data-ay-theme="bluepink"]{--ay-bg:#edf4ff;--ay-card:#fff0f7;--ay-text:#3d3159;--ay-primary:#a13d9b;--ay-border:#d8b5e5;--ay-soft:#f7e5f5}
+body[data-ay-theme="green"]{--ay-bg:#edf8ef;--ay-card:#fff;--ay-text:#173d27;--ay-primary:#23834a;--ay-border:#b8dfc2;--ay-soft:#dff3e4}
+body[data-ay-theme="purple"]{--ay-bg:#f4efff;--ay-card:#fff;--ay-text:#352451;--ay-primary:#7442c8;--ay-border:#d2c1f0;--ay-soft:#eae0ff}
+body[data-ay-theme="yellow"]{--ay-bg:#fff9db;--ay-card:#fffef5;--ay-text:#55420b;--ay-primary:#b77908;--ay-border:#ead58a;--ay-soft:#fff0b8}
+body[data-ay-theme="orange"]{--ay-bg:#fff3e8;--ay-card:#fff;--ay-text:#5a2b13;--ay-primary:#ea580c;--ay-border:#f3c5a8;--ay-soft:#ffe6d4}
+body[data-ay-theme="ocean"]{--ay-bg:#e7f7f7;--ay-card:#fff;--ay-text:#123d43;--ay-primary:#0f766e;--ay-border:#a9d9d5;--ay-soft:#d9f0ee}
+body[data-ay-theme="forest"]{--ay-bg:#edf5ee;--ay-card:#fff;--ay-text:#173d2a;--ay-primary:#166534;--ay-border:#b7d8bf;--ay-soft:#dff0e2}
+body[data-ay-theme="rose"]{--ay-bg:#fff1f2;--ay-card:#fff;--ay-text:#57243c;--ay-primary:#be123c;--ay-border:#f0bcc8;--ay-soft:#ffe1e5}
+body[data-ay-theme="sepia"]{--ay-bg:#f4ead8;--ay-card:#fff8e9;--ay-text:#493b2a;--ay-primary:#98652b;--ay-border:#dfcba9;--ay-soft:#efe0c3}
+body .panel,body .intro,body .item,body .card,body .category-card,body .poem-card,body .essay-item,body .essay-box,
+body .kanda,body .toc,body .stats,body .modal-content,body .story-reader,body .verse,body #reader,body #readerText,
+body .about,body .category,body .category-card{
+ background:var(--ay-card)!important;color:var(--ay-text)!important;border-color:var(--ay-border)!important;
+}
+body input,body select,body textarea{background:var(--ay-card)!important;color:var(--ay-text)!important;border-color:var(--ay-border)!important}
+body a{color:var(--ay-primary)}
+.ay-tools{max-width:1180px;margin:14px auto;padding:14px 16px;background:var(--ay-card);color:var(--ay-text);
+ border:2px solid var(--ay-border);border-radius:16px;box-shadow:var(--ay-shadow);display:grid;
+ grid-template-columns:2fr 1fr 1fr;gap:12px;align-items:end;font:14px/1.6 system-ui,sans-serif}
+.ay-tools h2,.ay-hint{grid-column:1/-1}.ay-tools h2{margin:0;color:var(--ay-primary);font-size:19px}
+.ay-tools label{display:block;font-weight:700;margin-bottom:5px}.ay-tools select{width:100%;padding:9px;border-radius:9px}
+.ay-tools button{padding:9px 12px;border:1px solid var(--ay-border);border-radius:9px;background:var(--ay-primary);color:#fff;cursor:pointer;font-weight:700}
+.ay-actions{display:flex;flex-wrap:wrap;gap:6px}.ay-hint{margin:0;font-size:12px;opacity:.75}
+.ay-theme-grid{display:flex;gap:6px;flex-wrap:wrap}.ay-swatch{min-width:70px!important}
+.ay-side-note{position:fixed;right:12px;top:180px;width:220px;padding:14px;border:1px solid var(--ay-border);
+ background:var(--ay-card);color:var(--ay-text);border-radius:14px;box-shadow:var(--ay-shadow);z-index:5;font-size:12px;line-height:1.8}
+.ay-side-note h3{color:var(--ay-primary);font-size:14px;margin-bottom:6px}
+.ay-side-note p{margin:0 0 8px}.ay-side-note a{font-weight:700}
+.ay-page-extra{max-width:1180px;margin:22px auto;padding:22px;background:var(--ay-card);border:1px solid var(--ay-border);
+ border-radius:16px;box-shadow:var(--ay-shadow);line-height:2}
+.ay-page-extra h2,.ay-page-extra h3{color:var(--ay-primary)}
+.ay-page-extra p{margin:10px 0;text-align:justify}
+@media(max-width:900px){.ay-side-note{display:none}.ay-tools{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.ay-tools{grid-template-columns:1fr;margin:10px;padding:12px}.ay-tools h2,.ay-hint{grid-column:auto}}
+</style>
+<style id="aayush-pwa-ui">
+.ay-appbar{position:relative;z-index:50;display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 16px;background:var(--ay-card,#fff);border-bottom:1px solid var(--ay-border,#dbe3ef)}
+.ay-brand{display:flex;align-items:center;gap:10px;font-weight:800;text-decoration:none;color:var(--ay-text,#17233a)}
+.ay-brand img{width:38px;height:38px;border-radius:10px}
+.ay-tools{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.ay-tools select{padding:7px 10px;border-radius:8px;border:1px solid var(--ay-border,#cbd5e1);background:var(--ay-card,#fff);color:var(--ay-text,#17233a)}
+.ay-install{display:none;padding:7px 11px;border:0;border-radius:8px;background:var(--ay-primary,#2563eb);color:#fff;font-weight:700;cursor:pointer}
+.ay-app-links{display:flex;gap:7px;flex-wrap:wrap;padding:8px 16px;background:var(--ay-soft,#eff6ff);border-bottom:1px solid var(--ay-border,#dbe3ef)}
+.ay-app-links a{font-weight:700;text-decoration:none;padding:5px 9px;border-radius:7px;color:var(--ay-text,#17233a)}
+.ay-app-links a:hover{background:var(--ay-card,#fff)}
+@media(max-width:600px){.ay-tools{width:100%;margin-left:0}.ay-app-links{overflow:auto;flex-wrap:nowrap}}
+</style>
+</head>
+
+<body>
+<div class="ay-appbar">
+  <a class="ay-brand" href="index.html" aria-label="आयुष नेपाली साहित्य">
+    <img src="logo.svg" alt="आयुष नेपाली साहित्य लोगो">
+    <span>आयुष नेपाली साहित्य</span>
+  </a>
+  <div class="ay-tools">
+    <label for="ayLanguage" style="font-weight:700">भाषा</label>
+    <select id="ayLanguage" aria-label="भाषा चयन"><option value="ne">नेपाली</option>
+<option value="en">English</option>
+<option value="hi">हिन्दी</option>
+<option value="es">Español</option>
+<option value="fr">Français</option>
+<option value="de">Deutsch</option>
+<option value="zh">中文</option>
+<option value="ja">日本語</option>
+<option value="ko">한국어</option>
+<option value="ar">العربية</option>
+<option value="ru">Русский</option>
+<option value="pt">Português</option>
+<option value="it">Italiano</option>
+<option value="bn">বাংলা</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="mr">मराठी</option>
+<option value="gu">ગુજરાતી</option>
+<option value="pa">ਪੰਜਾਬੀ</option>
+<option value="ur">اردو</option></select>
+    <label for="ayTheme" style="font-weight:700">थिम</label>
+    <select id="ayTheme" aria-label="थिम चयन">
+      <option value="light">Light</option><option value="dark">Dark</option>
+      <option value="blue">Blue</option><option value="sky">Sky Blue</option>
+      <option value="pink">Pink</option><option value="sky-pink">Sky Pink</option>
+      <option value="blue-pink">Blue Pink</option><option value="green">Green</option>
+      <option value="purple">Purple</option><option value="yellow">Yellow</option>
+      <option value="orange">Orange</option><option value="ocean">Ocean</option>
+      <option value="forest">Forest</option><option value="rose">Rose</option>
+      <option value="sepia">Sepia</option>
+    </select>
+    <button id="ayInstall" class="ay-install" type="button">📱 एप स्थापना</button>
+  </div>
+</div>
+<div class="ay-app-links">
+  <a href="index.html">गृहपृष्ठ</a><a href="about.html">हाम्रो बारेमा</a>
+  <a href="bal-sahitya.html">बाल साहित्य</a><a href="jibani.html">जीवनी</a>
+  <a href="kabita.html">कविता</a><a href="katha.html">कथा</a>
+  <a href="nibandha.html">निबन्ध</a><a href="ramayan.html">रामायण</a>
+  <a href="hanuman-chalisa.html">हनुमान चालीसा</a>
+</div>
+
+
+<header>
+
+<h1>॥ श्री रामायण ॥</h1>
+
+<p>सत्य, धर्म, त्याग, प्रेम र मर्यादाको महान् कथा</p>
+
+<p>AAYUSH NEPALI SAHITYA</p>
+
+</header>
+<div class="controls">
+
+<input
+class="search"
+type="search"
+id="search"
+placeholder="रामायणभित्र कथा खोज्नुहोस्..."
+>
+
+<select onchange="changeTheme(this.value)">
+<option value="">Theme छान्नुहोस्</option>
+<option value="light">Light</option>
+<option value="dark">Dark</option>
+<option value="blue">Blue</option>
+<option value="green">Green</option>
+</select>
+
+<button onclick="changeFont(1)">A+</button>
+<button onclick="changeFont(-1)">A-</button>
+
+<button onclick="window.print()">Print</button>
+
+</div>
+
+
+<main class="container">
+
+
+<section class="intro">
+
+<h2>रामायणको परिचय</h2>
+
+<p>
+रामायण हिन्दू धर्म र संस्कृतिको एक महान् महाकाव्य हो।
+यस महाकाव्यमा भगवान् श्रीरामको जीवन, आदर्श, सत्य,
+धर्म, कर्तव्य, त्याग, प्रेम र न्यायका विषयमा वर्णन गरिएको छ।
+</p>
+
+<p>
+रामायणले मानिसलाई सत्यको बाटोमा हिँड्न,
+आफ्नो कर्तव्य पूरा गर्न, ठूलालाई सम्मान गर्न,
+परिवारप्रति जिम्मेवार बन्न र अन्यायको विरोध गर्न
+प्रेरणा दिन्छ।
+</p>
+
+<p>
+महर्षि वाल्मीकि रामायणका आदिकवि मानिन्छन्।
+यस कथाका मुख्य पात्र श्रीराम, माता सीता,
+लक्ष्मण, भरत, हनुमान र रावण हुन्।
+</p>
+
+</section>
+
+
+<section class="toc">
+
+<h2>रामायणका सात काण्ड</h2>
+
+<a href="#bal">१. बालकाण्ड</a>
+<a href="#ayodhya">२. अयोध्याकाण्ड</a>
+<a href="#aranya">३. अरण्यकाण्ड</a>
+<a href="#kishkindha">४. किष्किन्धाकाण्ड</a>
+<a href="#sundar">५. सुन्दरकाण्ड</a>
+<a href="#yuddha">६. युद्धकाण्ड</a>
+<a href="#uttar">७. उत्तरकाण्ड</a>
+
+</section>
+
+
+<!-- 1 BAL KANDA -->
+
+<section class="kanda" id="bal">
+
+<h2>१. बालकाण्ड</h2>
+
+<h3>रामको जन्म</h3>
+
+<p>
+प्राचीन समयमा अयोध्या नामको सुन्दर र समृद्ध राज्य थियो।
+त्यहाँ राजा दशरथले शासन गर्दथे। उनी न्यायप्रिय,
+प्रजाप्रेमी र शक्तिशाली राजा थिए। उनका तीन रानीहरू
+कौशल्या, कैकेयी र सुमित्रा थिए।
+</p>
+
+<p>
+राजा दशरथका सन्तान नभएकाले उनी निकै चिन्तित थिए।
+ऋषिहरूको सल्लाहअनुसार उनले पुत्रेष्टि यज्ञ गरे।
+यज्ञको फलस्वरूप उनका तीन रानीबाट चार पुत्र जन्मिए।
+कौशल्याबाट राम, कैकेयीबाट भरत तथा सुमित्राबाट
+लक्ष्मण र शत्रुघ्न जन्मिए।
+</p>
+
+<p>
+चारै राजकुमारहरू हुर्कँदै गए। राम स्वभावले शान्त,
+दयालु, सत्यवादी र धर्मप्रति समर्पित थिए।
+लक्ष्मण रामलाई अत्यन्त माया गर्थे र सधैँ उनको साथमा रहन्थे।
+</p>
+
+<h3>विश्वामित्रको आगमन</h3>
+
+<p>
+एक दिन महर्षि विश्वामित्र राजा दशरथको दरबारमा आए।
+उनले आफ्नो यज्ञमा राक्षसहरूले बाधा पुर्‍याइरहेको
+बताउँदै रामलाई आफ्नो साथ पठाउन अनुरोध गरे।
+राजा दशरथ सुरुमा चिन्तित भए, तर गुरु वशिष्ठको
+सल्लाहपछि राम र लक्ष्मण विश्वामित्रसँग गए।
+</p>
+
+<p>
+राम र लक्ष्मणले ऋषिहरूको यज्ञको रक्षा गरे।
+त्यसपछि उनीहरू मिथिलातर्फ लागे।
+</p>
+
+<h3>सीता स्वयंवर</h3>
+
+<p>
+मिथिलाका राजा जनककी छोरी सीता अत्यन्त गुणी,
+दयालु र संस्कारी थिइन्। राजा जनकले सीताको
+विवाहका लागि भगवान् शिवको विशाल धनुष उठाएर
+त्यसमा प्रत्यञ्चा चढाउन सक्ने वीरसँग विवाह गराउने
+प्रतिज्ञा गरेका थिए।
+</p>
+
+<p>
+धेरै राजाहरूले प्रयास गरे तर सफल हुन सकेनन्।
+अन्ततः श्रीरामले सहजै धनुष उठाए र प्रत्यञ्चा
+चढाउने क्रममा धनुष भाँचियो।
+राजा जनकले अत्यन्त प्रसन्न भएर सीताको विवाह
+श्रीरामसँग गरिदिए।
+</p>
+
+<p>
+यसरी राम र सीताको विवाह भयो।
+साथै लक्ष्मणको विवाह उर्मिलासँग,
+भरतको विवाह माण्डवीसँग र शत्रुघ्नको विवाह
+श्रुतकीर्तिसँग सम्पन्न भयो।
+चारै जोडी अयोध्या फर्किए।
+</p>
+
+</section>
+
+
+<!-- 2 AYODHYA KANDA -->
+
+<section class="kanda" id="ayodhya">
+
+<h2>२. अयोध्याकाण्ड</h2>
+
+<h3>रामको राज्याभिषेकको तयारी</h3>
+
+<p>
+समय बित्दै गयो। श्रीराम आफ्नो सद्गुण,
+व्यवहार र प्रजाप्रेमका कारण सबैका प्रिय बने।
+राजा दशरथ वृद्ध हुँदै गएपछि उनले रामलाई
+युवराज बनाउने निर्णय गरे।
+अयोध्यामा उत्सवको तयारी सुरु भयो।
+</p>
+
+<h3>कैकेयीका दुई वरदान</h3>
+
+<p>
+कैकेयीकी दासी मन्थराले उनलाई रामको
+राज्याभिषेक रोक्न उक्साइन्।
+उनले कैकेयीलाई विगतमा राजा दशरथले
+दिएका दुई वरदान सम्झाइन्।
+</p>
+
+<p>
+कैकेयीले राजा दशरथसँग दुई माग राखिन्।
+पहिलो, भरतलाई राजा बनाइयोस्।
+दोस्रो, रामलाई चौध वर्ष वनवास पठाइयोस्।
+राजा दशरथ यो सुनेर अत्यन्त दुःखी भए।
+तर दिएको वचन पूरा गर्न उनी बाध्य भए।
+</p>
+
+<h3>रामको वनवास</h3>
+
+<p>
+रामले पिताको वचनको सम्मान गर्दै
+वनवास स्वीकार गरे। सीता र लक्ष्मणले पनि
+रामसँगै वन जाने निर्णय गरे।
+तीनै जना राजमहल छोडेर वनतर्फ लागे।
+</p>
+
+<p>
+राम वन गएको पीडाले राजा दशरथ अत्यन्त
+दुःखी भए। अन्ततः रामको वियोग सहन नसकी
+उनको निधन भयो।
+</p>
+
+<h3>भरतको त्याग</h3>
+
+<p>
+भरत अयोध्या फर्किएपछि सबै घटना थाहा पाए।
+उनी आमाको कार्यप्रति दुःखी भए र
+राज्य स्वीकार गर्न तयार भएनन्।
+उनी रामलाई फर्काउन वन पुगे।
+</p>
+
+<p>
+रामले पिताको वचन पूरा नगरी अयोध्या
+नफर्किने बताए। त्यसपछि भरतले रामका
+पादुका लिएर अयोध्या फर्किए।
+उनले रामको प्रतिनिधिका रूपमा राज्य चलाए।
+</p>
+
+</section>
+
+
+<!-- 3 ARANYA KANDA -->
+
+<section class="kanda" id="aranya">
+
+<h2>३. अरण्यकाण्ड</h2>
+
+<h3>वनको जीवन</h3>
+
+<p>
+राम, सीता र लक्ष्मणले विभिन्न वन तथा आश्रमहरूमा
+समय बिताउन थाले। उनीहरूले ऋषिमुनिहरूसँग भेट
+गरे र वनमा धर्मपूर्वक जीवन बिताए।
+</p>
+
+<h3>शूर्पणखाको घटना</h3>
+
+<p>
+एक दिन रावणकी बहिनी शूर्पणखा राम र लक्ष्मणको
+आश्रममा आइन्। उनले रामप्रति आकर्षण देखाइन्।
+रामले आफू विवाहित भएको बताए।
+त्यसपछि शूर्पणखाले सीताप्रति आक्रमण गर्न खोजिन्।
+लक्ष्मणले उनलाई रोके।
+</p>
+
+<p>
+यस घटनापछि शूर्पणखा आफ्ना दाजु रावणकहाँ
+पुगिन् र सीताको सुन्दरताबारे बताइन्।
+रावणले सीतालाई अपहरण गर्ने योजना बनाए।
+</p>
+
+<h3>सुनौलो मृग</h3>
+
+<p>
+रावणले मारीचलाई सुनौलो मृगको रूप धारण
+गर्न लगाए। त्यो मृग देखेर सीताले रामसँग
+त्यसलाई ल्याइदिन अनुरोध गरिन्।
+राम मृगको पछि लागे।
+</p>
+
+<p>
+केही समयपछि मारीचले रामको आवाजमा
+सहयोग मागेजस्तो आवाज निकाले।
+सीता चिन्तित भइन् र लक्ष्मणलाई रामको
+सहयोगका लागि पठाइन्।
+</p>
+
+<h3>सीताको हरण</h3>
+
+<p>
+लक्ष्मण आश्रमबाट टाढा गएपछि रावण
+साधुको भेषमा त्यहाँ आइपुगे।
+उसले सीतालाई छल गरी आफ्नो वास्तविक
+रूप देखायो र उनलाई लङ्कातर्फ लग्यो।
+</p>
+
+<p>
+जटायु नामका वृद्ध पक्षीराजले सीतालाई
+बचाउन रावणसँग संघर्ष गरे।
+तर रावणले जटायुलाई घाइते बनाएर अघि बढ्यो।
+</p>
+
+<p>
+राम र लक्ष्मण आश्रम फर्किएपछि सीता
+नदेखेर अत्यन्त दुःखी भए।
+उनीहरूले सीताको खोजी सुरु गरे।
+बाटोमा घाइते जटायु भेटिए।
+जटायुले सीतालाई रावणले लङ्का लगेको
+जानकारी दिए।
+</p>
+
+</section>
+
+
+<!-- 4 KISHKINDHA KANDA -->
+
+<section class="kanda" id="kishkindha">
+
+<h2>४. किष्किन्धाकाण्ड</h2>
+
+<h3>हनुमानसँग भेट</h3>
+
+<p>
+सीताको खोजी गर्दै राम र लक्ष्मण
+किष्किन्धा क्षेत्रमा पुगे।
+त्यहाँ उनीहरूको भेट हनुमानसँग भयो।
+हनुमान सुग्रीवका विश्वासपात्र थिए।
+</p>
+
+<p>
+हनुमानले राम र लक्ष्मणलाई सुग्रीवकहाँ लगे।
+सुग्रीवले आफ्ना दुःखहरू सुनाए।
+उनका दाजु बालीले राज्य र पत्नी खोसेका थिए।
+</p>
+
+<h3>राम र सुग्रीवको मित्रता</h3>
+
+<p>
+राम र सुग्रीवबीच मित्रताको सम्बन्ध स्थापित भयो।
+रामले सुग्रीवलाई सहयोग गर्ने वचन दिए।
+त्यसपछि बाली र सुग्रीवबीच युद्ध भयो।
+रामको सहयोगबाट सुग्रीवले आफ्नो राज्य
+फिर्ता पाए।
+</p>
+
+<p>
+सुग्रीव राजा बनेपछि उनले आफ्ना सबै
+वानर सेनालाई सीताको खोजीमा पठाए।
+हनुमान, अङ्गद र जाम्बवान दक्षिण दिशातर्फ लागे।
+</p>
+
+<h3>सम्पातीको जानकारी</h3>
+
+<p>
+सीताको खोजी गर्दै वानरहरू समुद्र किनार पुगे।
+त्यहाँ उनीहरूले सम्पाती नामका विशाल
+पक्षीलाई भेटे।
+सम्पातीले सीता समुद्रपारि लङ्कामा
+रहेको जानकारी दिए।
+</p>
+
+<p>
+अब समुद्र पार गर्ने जिम्मेवारी हनुमानमाथि आयो।
+जाम्बवानले हनुमानलाई उनको शक्ति सम्झाए।
+हनुमानले आफ्नो विशाल स्वरूप धारण गरे
+र लङ्कातर्फ प्रस्थान गरे।
+</p>
+
+</section>
+
+
+<!-- 5 SUNDAR KANDA -->
+
+<section class="kanda" id="sundar">
+
+<h2>५. सुन्दरकाण्ड</h2>
+
+<h3>हनुमानको समुद्र यात्रा</h3>
+
+<p>
+हनुमान विशाल समुद्र पार गर्दै लङ्कातर्फ लागे।
+यात्राका क्रममा विभिन्न बाधाहरू आए।
+तर उनले आफ्नो बुद्धि, साहस र धैर्यका
+साथ ती बाधाहरू पार गरे।
+</p>
+
+<h3>अशोक वाटिकामा सीता</h3>
+
+<p>
+लङ्का पुगेपछि हनुमानले नगरको अवलोकन गरे।
+धेरै खोजी गरेपछि उनले अशोक वाटिकामा
+माता सीतालाई भेटे।
+सीता रामको सम्झनामा दुःखी अवस्थामा थिइन्।
+</p>
+
+<p>
+हनुमानले रामको परिचय दिए र
+रामले पठाएको चिनारीको औँठी सीतालाई दिए।
+सीताले हनुमानलाई रामका लागि आफ्नो
+सन्देश र चूडामणि प्रदान गरिन्।
+</p>
+
+<h3>लङ्कामा हनुमान</h3>
+
+<p>
+सीताको अवस्था थाहा पाएपछि हनुमानले
+रावणको शक्ति र लङ्काको अवस्था बुझ्ने
+उद्देश्यले अशोक वाटिकामा हलचल मच्चाए।
+रावणका सैनिकहरूले उनलाई नियन्त्रणमा लिए।
+</p>
+
+<p>
+रावणको दरबारमा हनुमानले रामको सन्देश दिए।
+रावणले उनको पुच्छरमा आगो लगाउने आदेश दियो।
+हनुमानले त्यस अवसरलाई प्रयोग गर्दै
+लङ्काका विभिन्न स्थानमा आगो फैलाए।
+त्यसपछि उनी समुद्र पार गरी रामकहाँ फर्किए।
+</p>
+
+<h3>रामलाई सीताको सन्देश</h3>
+
+<p>
+हनुमानले रामलाई सीताको अवस्थाबारे बताए।
+सीता लङ्कामा सुरक्षित रहेकी र रामको
+प्रतीक्षामा रहेको खबर सुनेपछि रामले
+लङ्कातर्फ जाने तयारी गरे।
+</p>
+
+</section>
+
+
+<!-- 6 YUDDHA KANDA -->
+
+<section class="kanda" id="yuddha">
+
+<h2>६. युद्धकाण्ड (लङ्काकाण्ड)</h2>
+
+<h3>समुद्रमाथि सेतु निर्माण</h3>
+
+<p>
+रामले विशाल वानर सेनासहित समुद्र किनारमा
+पुगेर लङ्का जाने उपाय खोजे।
+समुद्र पार गर्न कठिन थियो।
+वानर सेनाले नल र नीलको सहयोगमा
+समुद्रमाथि सेतु निर्माण गरे।
+यसलाई रामसेतु भनिन्छ।
+</p>
+
+<h3>लङ्कामा युद्ध</h3>
+
+<p>
+रामको सेना लङ्का पुगेपछि युद्ध सुरु भयो।
+रावणको सेनामा धेरै शक्तिशाली योद्धाहरू थिए।
+दुवै पक्षबीच ठूलो संघर्ष भयो।
+</p>
+
+<p>
+रावणका भाइ विभीषणले अधर्मको विरोध गर्दै
+रामको पक्ष रोजेका थिए।
+रामले विभीषणलाई सम्मानपूर्वक स्वीकार गरे।
+</p>
+
+<h3>कुम्भकर्ण र इन्द्रजित</h3>
+
+<p>
+युद्धका क्रममा रावणका शक्तिशाली योद्धाहरू
+कुम्भकर्ण र इन्द्रजित पनि युद्धमा सहभागी भए।
+वानर सेनाले ठूलो कठिनाइको सामना गर्नुपर्‍यो।
+लक्ष्मण र हनुमानले महत्वपूर्ण भूमिका निर्वाह गरे।
+</p>
+
+<h3>लक्ष्मणको उपचार</h3>
+
+<p>
+युद्धका क्रममा लक्ष्मण गम्भीर रूपमा घाइते भए।
+वैद्यको सल्लाहअनुसार विशेष औषधि आवश्यक भयो।
+हनुमान औषधि खोज्न हिमाली क्षेत्रमा गए।
+औषधि पहिचान गर्न कठिन भएपछि
+उनी पूरा पर्वत नै लिएर फर्किए।
+लक्ष्मणको उपचार भयो।
+</p>
+
+<h3>रावणको अन्त्य</h3>
+
+<p>
+अन्ततः राम र रावणबीच निर्णायक युद्ध भयो।
+रावण अत्यन्त शक्तिशाली भए पनि
+रामले धर्म र न्यायको पक्षबाट युद्ध गरे।
+लामो संघर्षपछि रामले रावणलाई पराजित गरे।
+</p>
+
+<p>
+रावणको अन्त्यपछि विभीषणलाई लङ्काको
+राजा बनाइयो।
+सीताको उद्धार भयो।
+राम, सीता, लक्ष्मण र उनीहरूका साथीहरू
+अयोध्या फर्कने तयारीमा लागे।
+</p>
+
+<h3>रामको अयोध्या आगमन</h3>
+
+<p>
+चौध वर्षको वनवास पूरा भएपछि राम,
+सीता र लक्ष्मण अयोध्या फर्किए।
+भरतले रामका पादुका फिर्ता दिए।
+अयोध्यावासीले दीप प्रज्वलन गरी
+रामको स्वागत गरे।
+</p>
+
+<p>
+त्यसपछि रामको राज्याभिषेक सम्पन्न भयो।
+रामराज्यको स्थापना भयो।
+</p>
+
+</section>
+
+
+<!-- 7 UTTAR KANDA -->
+
+<section class="kanda" id="uttar">
+
+<h2>७. उत्तरकाण्ड</h2>
+
+<h3>रामराज्य</h3>
+
+<p>
+राम राजा बनेपछि अयोध्यामा न्याय,
+शान्ति र समृद्धिको शासन चल्यो।
+प्रजाको हितलाई पहिलो प्राथमिकता दिइयो।
+रामले आफ्नो राज्यमा धर्म र मर्यादालाई
+महत्त्व दिए।
+</p>
+
+<h3>लव र कुश</h3>
+
+<p>
+उत्तरकाण्डको परम्परागत कथाअनुसार
+सीता वनमा वाल्मीकि ऋषिको आश्रममा
+बस्न पुगिन्।
+त्यहीँ उनले लव र कुश नामका दुई
+पुत्रलाई जन्म दिइन्।
+</p>
+
+<p>
+वाल्मीकि ऋषिले दुवै बालकलाई शिक्षा,
+संस्कार र धनुर्विद्याको ज्ञान दिए।
+उनीहरूले रामायणको कथा पनि सिके।
+</p>
+
+<h3>रामायणको गायन</h3>
+
+<p>
+लव र कुशले वाल्मीकि ऋषिबाट सिकेको
+रामायणलाई मधुर स्वरमा गाउन थाले।
+उनीहरूले विभिन्न सभामा रामको जीवनकथा
+सुनाए।
+यसरी रामायणको कथा नयाँ पुस्तासम्म पुग्यो।
+</p>
+
+<h3>रामको अन्तिम यात्रा</h3>
+
+<p>
+उत्तरकाण्डका विभिन्न परम्परागत वर्णनमा
+रामको अन्तिम यात्राबारे उल्लेख पाइन्छ।
+रामले आफ्नो अवतारको उद्देश्य पूरा गरेपछि
+आफ्नो दिव्य स्वरूपमा फर्किएको विश्वास गरिन्छ।
+</p>
+
+<p>
+यसरी रामायणको कथा धर्म, सत्य,
+मर्यादा, त्याग र कर्तव्यको सन्देश दिँदै
+समापन हुन्छ।
+</p>
+
+</section>
+
+
+<section class="intro">
+
+<h2>रामायणबाट प्राप्त हुने शिक्षा</h2>
+
+<p>
+१. सधैँ सत्यको बाटोमा हिँड्नुपर्छ।
+</p>
+
+<p>
+२. आफ्ना आमाबुबा र गुरुजनको सम्मान गर्नुपर्छ।
+</p>
+
+<p>
+३. कठिन परिस्थितिमा पनि धैर्य राख्नुपर्छ।
+</p>
+
+<p>
+४. मित्रतालाई विश्वास र सहयोगले बलियो बनाउनुपर्छ।
+</p>
+
+<p>
+५. अन्याय र अधर्मको अन्त्यका लागि आवाज उठाउनुपर्छ।
+</p>
+
+<p>
+६. अहङ्कारले मानिसको पतन गराउँछ।
+</p>
+
+<p>
+७. कर्तव्य र मर्यादाको पालना गर्नुपर्छ।
+</p>
+
+</section>
+
+<section class="ay-page-extra">
+<h2>📜 रामायणको विस्तृत व्याख्या, जीवनदर्शन र समग्र सन्देश</h2>
+<h3>१. आदर्श व्यक्तित्वको शिक्षा</h3>
+<p>रामायणको केन्द्रमा श्रीरामको चरित्र छ। उहाँलाई मर्यादा, सत्य, कर्तव्य र संयमका आदर्शका रूपमा प्रस्तुत गरिन्छ। राजकुमार भएर पनि कठिन परिस्थितिमा व्यक्तिगत सुखभन्दा पिताको वचन र कर्तव्यलाई प्राथमिकता दिनु कथाको महत्वपूर्ण नैतिक पक्ष हो। यसबाट अधिकारसँगै जिम्मेवारी पनि आउँछ भन्ने शिक्षा लिन सकिन्छ।</p>
+<h3>२. सीताको धैर्य र आत्मसम्मान</h3>
+<p>सीताको पात्रलाई केवल दुःख सहने पात्रका रूपमा मात्र होइन, कठिन परिस्थितिमा दृढ रहने, निर्णयमा अडिने र आफ्नो मर्यादा कायम राख्ने व्यक्तित्वका रूपमा बुझ्न सकिन्छ। वनवास, अपहरण र अशोक वाटिकाको कठिन अवस्थामा पनि उनको आत्मसम्मान र धैर्य कथाको महत्वपूर्ण पक्ष हो।</p>
+<h3>३. लक्ष्मण, भरत र शत्रुघ्नको योगदान</h3>
+<p>रामायणको आदर्श केवल रामको कथामा सीमित छैन। लक्ष्मणको सेवा र त्याग, भरतको राज्यप्रतिको अनासक्ति र रामप्रतिको सम्मान, तथा शत्रुघ्नको पारिवारिक जिम्मेवारीले परिवार, कर्तव्य र सम्बन्धको विभिन्न रूप देखाउँछन्। भरतले पादुका राखेर राज्य सञ्चालन गर्नु त्याग र प्रतिनिधि नेतृत्वको प्रतीकात्मक उदाहरणका रूपमा व्याख्या गर्न सकिन्छ।</p>
+<h3>४. हनुमानको सेवा, बुद्धि र साहस</h3>
+<p>हनुमानको चरित्रमा बलसँगै विवेक, नम्रता, नेतृत्व, समस्या समाधान र सेवाभाव जोडिएको छ। समुद्र पार गर्ने, सीतालाई भेट्ने, लङ्का पुगेर सूचना ल्याउने र युद्धमा सहयोग गर्ने प्रसंगहरूले चुनौतीपूर्ण काममा आत्मविश्वास र रणनीतिक सोचको महत्व देखाउँछन्।</p>
+<h3>५. रावणको चरित्रबाट प्राप्त चेतावनी</h3>
+<p>रावण विद्वान्, शक्तिशाली र सम्पन्न राजा भए पनि अहंकार, अन्याय र अनियन्त्रित इच्छाका कारण पतनतर्फ जान्छन्। यसले केवल ज्ञान वा शक्ति पर्याप्त हुँदैन; त्यसलाई सही नैतिक दिशामा प्रयोग गर्नुपर्छ भन्ने सन्देश दिन्छ। रामायणको विरोधी पात्रको रूपमा रावणको चरित्रलाई अध्ययन गर्दा शक्ति र चरित्रबीचको सम्बन्ध बुझ्न सकिन्छ।</p>
+<h3>६. सात काण्डको समग्र अर्थ</h3>
+<p>बालकाण्डले रामको प्रारम्भिक जीवन र विवाहको पृष्ठभूमि तयार गर्छ। अयोध्याकाण्डले वचन, परिवार र त्यागको परीक्षा देखाउँछ। अरण्यकाण्डले वनजीवन, संकट र सीता हरणको मोड ल्याउँछ। किष्किन्धाकाण्डले मित्रता र सहयोगको शक्ति देखाउँछ। सुन्दरकाण्डमा हनुमानको साहस र भक्तिको उत्कर्ष देखिन्छ। युद्धकाण्डमा अन्यायविरुद्धको संघर्ष र विजयको कथा आउँछ। उत्तरकाण्डमा राज्य, परिवार, लोकधर्म र रामकथाको पछिल्लो परम्पराबारे चर्चा हुन्छ।</p>
+<h3>७. आधुनिक जीवनमा रामायण</h3>
+<p>रामायणलाई आधुनिक जीवनमा पढ्दा यसको धार्मिक वा सांस्कृतिक अर्थसँगै नेतृत्व, परिवार, नैतिक निर्णय, संकट व्यवस्थापन, मित्रता, जिम्मेवारी र आत्मअनुशासनका पक्ष पनि अध्ययन गर्न सकिन्छ। विद्यालय, परिवार र समाजमा सत्य बोल्ने, आफ्नो जिम्मेवारी पूरा गर्ने, अरूको सम्मान गर्ने र कठिन समयमा धैर्य राख्ने व्यवहारका लागि यसबाट प्रेरणा लिन सकिन्छ।</p>
+<h3>८. अध्ययन गर्दा ध्यान दिनुपर्ने कुरा</h3>
+<p>रामायणका विभिन्न संस्करण, क्षेत्रीय परम्परा र भाषिक रूपहरूमा कथाको प्रस्तुति फरक हुन सक्छ। त्यसैले कुनै एक संस्करणलाई मात्र सम्पूर्ण परम्पराको एउटै रूप ठान्नुको सट्टा विभिन्न रामायण परम्परालाई सम्मानपूर्वक अध्ययन गर्नु उपयोगी हुन्छ। यो पृष्ठ अध्ययन र सामान्य परिचयका लागि तयार गरिएको डिजिटल प्रस्तुति हो।</p>
+</section></main>
+
+
+<footer>
+
+<h2>॥ जय श्री राम ॥</h2>
+
+<p>AAYUSH NEPALI SAHITYA</p>
+
+<p>लेखक तथा वेबसाइट निर्माता: Aayush Jaishi</p>
+
+<p>नेपाली साहित्यको संरक्षण र प्रवर्द्धन हाम्रो अभियान।</p>
+
+<p>© 2026 Aayush Nepali Sahitya</p>
+
+</footer>
+
+
+<script>
+
+function changeTheme(theme){
+
+document.body.classList.remove(
+"dark","blue","green"
+);
+
+if(theme==="dark"){
+document.body.classList.add("dark");
+}
+
+if(theme==="blue"){
+document.body.classList.add("blue");
+}
+
+if(theme==="green"){
+document.body.classList.add("green");
+}
+
+if(theme==="light"){
+document.body.classList.remove(
+"dark","blue","green"
+);
+}
+
+localStorage.setItem("ramayanTheme",theme);
+
+}
+
+const savedTheme=localStorage.getItem("ramayanTheme");
+
+if(savedTheme){
+changeTheme(savedTheme);
+}
+
+let fontSize=16;
+
+function changeFont(value){
+
+fontSize+=value;
+
+if(fontSize<12) fontSize=12;
+if(fontSize>26) fontSize=26;
+
+document.querySelectorAll(".kanda p").forEach(p=>{
+p.style.fontSize=fontSize+"px";
+});
+
+}
+
+document.getElementById("search")
+.addEventListener("input",function(){
+
+let value=this.value.toLowerCase();
+
+document.querySelectorAll(".kanda")
+.forEach(section=>{
+
+let text=section.innerText.toLowerCase();
+
+section.classList.toggle(
+"hidden",
+!text.includes(value)
+);
+
+});
+
+});
+
+</script>
+
+
+
+
+<script>
+(function(){
+ const themes=[["light", "Light"], ["dark", "Dark"], ["blue", "Blue"], ["skyblue", "Sky Blue"], ["pink", "Pink"], ["skypink", "Sky Pink"], ["bluepink", "Blue Pink"], ["green", "Green"], ["purple", "Purple"], ["yellow", "Yellow"], ["orange", "Orange"], ["ocean", "Ocean"], ["forest", "Forest"], ["rose", "Rose"], ["sepia", "Sepia"]];
+ const langs={"ne":"नेपाली","en":"English","hi":"हिन्दी","es":"Español","fr":"Français","de":"Deutsch","zh":"中文","ja":"日本語","ko":"한국어","ar":"العربية","ru":"Русский","pt":"Português","it":"Italiano","bn":"বাংলা","ta":"தமிழ்","te":"తెలుగు","mr":"मराठी","gu":"ગુજરાતી","pa":"ਪੰਜਾਬੀ","ur":"اردو"};
+ const tr={"ne":{"home":"गृहपृष्ठ","bio":"जीवनी","poem":"कविता","story":"कथा","essay":"निबन्ध","ramayan":"रामायण","chalisa":"हनुमान चालीसा","about":"हाम्रो बारेमा","theme":"थीम","language":"भाषा"},"en":{"home":"Home","bio":"Biography","poem":"Poetry","story":"Stories","essay":"Essays","ramayan":"Ramayana","chalisa":"Hanuman Chalisa","about":"About","theme":"Theme","language":"Language"},"hi":{"home":"होम","bio":"जीवनी","poem":"कविता","story":"कहानी","essay":"निबंध","ramayan":"रामायण","chalisa":"हनुमान चालीसा","about":"हमारे बारे में","theme":"थीम","language":"भाषा"},"es":{"home":"Inicio","bio":"Biografías","poem":"Poesía","story":"Historias","essay":"Ensayos","ramayan":"Ramayana","chalisa":"Hanuman Chalisa","about":"Sobre nosotros","theme":"Tema","language":"Idioma"},"fr":{"home":"Accueil","bio":"Biographies","poem":"Poésie","story":"Histoires","essay":"Essais","ramayan":"Ramayana","chalisa":"Hanuman Chalisa","about":"À propos","theme":"Thème","language":"Langue"},"de":{"home":"Startseite","bio":"Biografien","poem":"Gedichte","story":"Geschichten","essay":"Aufsätze","ramayan":"Ramayana","chalisa":"Hanuman Chalisa","about":"Über uns","theme":"Thema","language":"Sprache"},"zh":{"home":"首页","bio":"传记","poem":"诗歌","story":"故事","essay":"文章","ramayan":"罗摩衍那","chalisa":"哈奴曼颂","about":"关于我们","theme":"主题","language":"语言"},"ja":{"home":"ホーム","bio":"伝記","poem":"詩","story":"物語","essay":"エッセイ","ramayan":"ラーマーヤナ","chalisa":"ハヌマーン・チャリサー","about":"私たちについて","theme":"テーマ","language":"言語"},"ko":{"home":"홈","bio":"전기","poem":"시","story":"이야기","essay":"에세이","ramayan":"라마야나","chalisa":"하누만 찰리사","about":"소개","theme":"테마","language":"언어"},"ar":{"home":"الرئيسية","bio":"السيرة","poem":"الشعر","story":"القصص","essay":"المقالات","ramayan":"رامايانا","chalisa":"هانومان تشاليسا","about":"من نحن","theme":"المظهر","language":"اللغة"},"ru":{"home":"Главная","bio":"Биографии","poem":"Поэзия","story":"Рассказы","essay":"Эссе","ramayan":"Рамаяна","chalisa":"Хануман Чалиса","about":"О нас","theme":"Тема","language":"Язык"},"pt":{"home":"Início","bio":"Biografias","poem":"Poesia","story":"Histórias","essay":"Ensaios","ramayan":"Ramayana","chalisa":"Hanuman Chalisa","about":"Sobre nós","theme":"Tema","language":"Idioma"},"it":{"home":"Home","bio":"Biografie","poem":"Poesia","story":"Storie","essay":"Saggi","ramayan":"Ramayana","chalisa":"Hanuman Chalisa","about":"Chi siamo","theme":"Tema","language":"Lingua"},"bn":{"home":"হোম","bio":"জীবনী","poem":"কবিতা","story":"গল্প","essay":"প্রবন্ধ","ramayan":"রামায়ণ","chalisa":"হনুমান চালিসা","about":"আমাদের সম্পর্কে","theme":"থিম","language":"ভাষা"},"ta":{"home":"முகப்பு","bio":"வாழ்க்கை வரலாறு","poem":"கவிதை","story":"கதை","essay":"கட்டுரை","ramayan":"ராமாயணம்","chalisa":"அனுமன் சாலிசா","about":"எங்களைப் பற்றி","theme":"தீம்","language":"மொழி"},"te":{"home":"హోమ్","bio":"జీవిత చరిత్ర","poem":"కవిత్వం","story":"కథలు","essay":"వ్యాసాలు","ramayan":"రామాయణం","chalisa":"హనుమాన్ చాలీసా","about":"మా గురించి","theme":"థీమ్","language":"భాష"},"mr":{"home":"मुखपृष्ठ","bio":"चरित्र","poem":"कविता","story":"कथा","essay":"निबंध","ramayan":"रामायण","chalisa":"हनुमान चालीसा","about":"आमच्याबद्दल","theme":"थीम","language":"भाषा"},"gu":{"home":"હોમ","bio":"જીવનચરિત્ર","poem":"કવિતા","story":"વાર્તા","essay":"નિબંધ","ramayan":"રામાયણ","chalisa":"હનુમાન ચાલીસા","about":"અમારા વિશે","theme":"થીમ","language":"ભાષા"},"pa":{"home":"ਘਰ","bio":"ਜੀਵਨੀ","poem":"ਕਵਿਤਾ","story":"ਕਹਾਣੀਆਂ","essay":"ਲੇਖ","ramayan":"ਰਾਮਾਇਣ","chalisa":"ਹਨੂਮਾਨ ਚਾਲੀਸਾ","about":"ਸਾਡੇ ਬਾਰੇ","theme":"ਥੀਮ","language":"ਭਾਸ਼ਾ"},"ur":{"home":"گھر","bio":"سوانح","poem":"شاعری","story":"کہانیاں","essay":"مضامین","ramayan":"رامائن","chalisa":"ہنومان چالیسہ","about":"ہمارے بارے میں","theme":"تھیم","language":"زبان"}};
+ const savedTheme=localStorage.getItem("aayushTheme15")||"light";
+ document.body.dataset.ayTheme=savedTheme;
+ function navMap(){
+  const links=document.querySelectorAll("nav a");
+  const map={"index.html":"home","jibani.html":"bio","kabita.html":"poem","katha.html":"story","nibandha.html":"essay","ramayan.html":"ramayan","hanuman-chalisa.html":"chalisa","about.html":"about"};
+  links.forEach(a=>{const key=map[(a.getAttribute("href")||"").split("#")[0]]; if(key) a.dataset.navKey=key;});
+ }
+ function renderTools(){
+  if(document.getElementById("ayThemeLang")) return;
+  const bar=document.createElement("section"); bar.id="ayThemeLang"; bar.className="ay-tools";
+  bar.innerHTML=`<h2>🎨 Theme & Language</h2>
+   <div><label data-i18n="theme">Theme</label><select id="ayThemeSelect"></select></div>
+   <div><label data-i18n="language">Language</label><select id="ayLangSelect"></select></div>
+   <div class="ay-actions"><button type="button" id="ayReset">↺ Reset</button></div>
+   <p class="ay-hint">🇳🇵 नेपाली प्राथमिक भाषा। नेपालीसँगै English, हिन्दी, Español, Français, Deutsch, 中文, 日本語, 한국어, العربية, Русский लगायत २० भाषा विकल्प छन्।</p>`;
+  const nav=document.querySelector("nav"); if(nav) nav.insertAdjacentElement("afterend",bar); else document.body.prepend(bar);
+  const ts=document.getElementById("ayThemeSelect"), ls=document.getElementById("ayLangSelect");
+  themes.forEach(([v,n])=>{const o=document.createElement("option");o.value=v;o.textContent=n;ts.appendChild(o)});
+  Object.entries(langs).forEach(([v,n])=>{const o=document.createElement("option");o.value=v;o.textContent=(v==="ne"?"🇳🇵 ":"")+n;ls.appendChild(o)});
+  ts.value=savedTheme; ls.value=localStorage.getItem("aayushLang20")||"ne";
+  ts.onchange=()=>{document.body.dataset.ayTheme=ts.value;localStorage.setItem("aayushTheme15",ts.value)};
+  ls.onchange=()=>{localStorage.setItem("aayushLang20",ls.value);applyLang(ls.value)};
+  document.getElementById("ayReset").onclick=()=>{localStorage.removeItem("aayushTheme15");localStorage.removeItem("aayushLang20");location.reload()};
+ }
+ function applyLang(code){
+  const d=tr[code]||tr.en;
+  document.querySelectorAll("[data-nav-key]").forEach(a=>{const k=a.dataset.navKey;if(d[k]) a.textContent=(k==="home"?"🏠 ":"")+d[k]});
+  document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.dataset.i18n;if(d[k]) el.textContent=d[k]});
+  document.documentElement.lang=code;
+ }
+ navMap(); renderTools(); applyLang(localStorage.getItem("aayushLang20")||"ne");
+ const note=document.createElement("aside"); note.className="ay-side-note";
+ note.innerHTML=`<h3>📚 AAYUSH नेपाली साहित्य</h3><p>यो डिजिटल पुस्तकालयमा कथा, कविता, बाल साहित्य, निबन्ध, जीवनी, रामायण र हनुमान चालीसा सामग्री एउटै ठाउँमा राखिएको छ।</p><p>थीम परिवर्तन गर्दा रोजाइ सुरक्षित हुन्छ। भाषा विकल्पले मुख्य interface बदल्छ; मूल साहित्यिक पाठ सुरक्षित रहन्छ।</p><a href="index.html">गृहपृष्ठ</a>`;
+ document.body.appendChild(note);
+})();
+</script>
+<script id="aayush-pwa-js">
+(function(){
+  const langs = [{"code": "ne", "name": "नेपाली"}, {"code": "en", "name": "English"}, {"code": "hi", "name": "हिन्दी"}, {"code": "es", "name": "Español"}, {"code": "fr", "name": "Français"}, {"code": "de", "name": "Deutsch"}, {"code": "zh", "name": "中文"}, {"code": "ja", "name": "日本語"}, {"code": "ko", "name": "한국어"}, {"code": "ar", "name": "العربية"}, {"code": "ru", "name": "Русский"}, {"code": "pt", "name": "Português"}, {"code": "it", "name": "Italiano"}, {"code": "bn", "name": "বাংলা"}, {"code": "ta", "name": "தமிழ்"}, {"code": "te", "name": "తెలుగు"}, {"code": "mr", "name": "मराठी"}, {"code": "gu", "name": "ગુજરાતી"}, {"code": "pa", "name": "ਪੰਜਾਬੀ"}, {"code": "ur", "name": "اردو"}];
+  const savedLang = localStorage.getItem("aayushLanguage") || "ne";
+  const savedTheme = localStorage.getItem("aayushTheme") || "light";
+  document.documentElement.lang = savedLang;
+  document.documentElement.dataset.primaryLanguage = "ne";
+
+  function setTheme(t){
+    document.body.dataset.ayTheme = t;
+    localStorage.setItem("aayushTheme", t);
+  }
+  function setLang(l){
+    document.documentElement.lang = l;
+    localStorage.setItem("aayushLanguage", l);
+  }
+
+  document.addEventListener("DOMContentLoaded", function(){
+    const sel = document.getElementById("ayLanguage");
+    if(sel){
+      sel.value = savedLang;
+      sel.addEventListener("change", e => setLang(e.target.value));
+    }
+    const theme = document.getElementById("ayTheme");
+    if(theme){
+      theme.value = savedTheme;
+      theme.addEventListener("change", e => setTheme(e.target.value));
+    }
+    setTheme(savedTheme);
+    const installBtn = document.getElementById("ayInstall");
+    let deferredPrompt = null;
+    window.addEventListener("beforeinstallprompt", e => {
+      e.preventDefault();
+      deferredPrompt = e;
+      if(installBtn) installBtn.style.display = "inline-block";
+    });
+    if(installBtn){
+      installBtn.addEventListener("click", async () => {
+        if(!deferredPrompt) return;
+        deferredPrompt.prompt();
+        await deferredPrompt.userChoice;
+        deferredPrompt = null;
+        installBtn.style.display = "none";
+      });
+    }
+  });
+
+  if("serviceWorker" in navigator){
+    window.addEventListener("load", () => navigator.serviceWorker.register("./service-worker.js").catch(()=>{}));
+  }
+})();
+</script>
+</body>
+</html>
